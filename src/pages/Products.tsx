@@ -149,21 +149,21 @@ export function Products() {
                                         onValueChange={setFluxRange}
                                         minStepsBetweenThumbs={1}
                                     >
-                                        <Slider.Track className="bg-gray-200 relative grow rounded-full h-[3px]">
+                                        <Slider.Track className="bg-gray-200 relative grow rounded-full h-1">
                                             <Slider.Range className="absolute bg-[#FF8351] rounded-full h-full" />
                                         </Slider.Track>
                                         <Slider.Thumb
-                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-[0_2px_10px] shadow-black/10 rounded-[10px] hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
+                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-md rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
                                             aria-label="Min flux"
                                         />
                                         <Slider.Thumb
-                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-[0_2px_10px] shadow-black/10 rounded-[10px] hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
+                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-md rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
                                             aria-label="Max flux"
                                         />
                                     </Slider.Root>
                                     <div className="flex justify-between mt-4 text-xs font-medium text-gray-500">
-                                        <span>{fluxRange[0]} lm</span>
-                                        <span>{fluxRange[1]} lm</span>
+                                        <span>{fluxRange[0].toLocaleString()} lm</span>
+                                        <span>{fluxRange[1].toLocaleString()} lm</span>
                                     </div>
                                 </AccordionContent>
                             </AccordionItem>
@@ -182,15 +182,15 @@ export function Products() {
                                         onValueChange={setPowerRange}
                                         minStepsBetweenThumbs={1}
                                     >
-                                        <Slider.Track className="bg-gray-200 relative grow rounded-full h-[3px]">
+                                        <Slider.Track className="bg-gray-200 relative grow rounded-full h-1">
                                             <Slider.Range className="absolute bg-[#FF8351] rounded-full h-full" />
                                         </Slider.Track>
                                         <Slider.Thumb
-                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-[0_2px_10px] shadow-black/10 rounded-[10px] hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
+                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-md rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
                                             aria-label="Min power"
                                         />
                                         <Slider.Thumb
-                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-[0_2px_10px] shadow-black/10 rounded-[10px] hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
+                                            className="block w-5 h-5 bg-white border-2 border-[#FF8351] shadow-md rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FF8351]/20 transition-transform hover:scale-110"
                                             aria-label="Max power"
                                         />
                                     </Slider.Root>
@@ -214,7 +214,7 @@ export function Products() {
                             </span>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {filteredProducts.map((product, index) => (
                                 <motion.div
                                     key={product.id}
@@ -224,14 +224,14 @@ export function Products() {
                                     className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl hover:border-[#FF8351]/30 transition-all duration-300 flex flex-col"
                                 >
                                     {/* Image */}
-                                    <div className="aspect-square p-8 bg-white flex items-center justify-center relative overflow-hidden border-b border-gray-100">
+                                    <div className="aspect-[4/3] p-6 bg-white flex items-center justify-center relative overflow-hidden border-b border-gray-100">
                                         <ImageWithFallback
                                             src={product.image}
                                             alt={product.name}
                                             className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                                         />
                                         {product.inStock && (
-                                            <div className="absolute top-4 left-4 bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
+                                            <div className="absolute top-3 left-3 bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1 z-10">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
                                                 En existencia
                                             </div>
