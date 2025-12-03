@@ -1,6 +1,6 @@
 import { ArrowUpRight, Zap, Sun } from "lucide-react";
 import { motion } from "motion/react";
-import starProductImg from "figma:asset/e3e9a7e25d21fc5f686275e87d55866d78b5fa13.png";
+import starProductImg from "../assets/e3e9a7e25d21fc5f686275e87d55866d78b5fa13.png";
 
 const mainProduct = {
   id: "OPP-MAX-200",
@@ -57,7 +57,7 @@ export function StarProducts() {
               Productos <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-900 via-zinc-600 to-zinc-900">Estrella</span>
             </h2>
           </div>
-          
+
           <button className="hidden md:flex px-4 py-2 rounded-full border border-zinc-200 hover:border-[#FF8351] hover:text-[#FF8351] hover:bg-orange-50 transition-all font-bold text-xs uppercase tracking-wider items-center gap-2">
             Ver Catálogo
             <ArrowUpRight size={14} />
@@ -66,9 +66,9 @@ export function StarProducts() {
 
         {/* Grid Layout - Optimized Height for Single Screen View */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 h-auto lg:h-[500px]">
-          
+
           {/* Main Feature Card (Left - Spans 5 cols) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -79,8 +79,8 @@ export function StarProducts() {
 
             {/* Product Image - Maximized Size */}
             <div className="absolute inset-0 flex items-center justify-center p-0">
-              <motion.img 
-                src={mainProduct.image} 
+              <motion.img
+                src={mainProduct.image}
                 alt={mainProduct.name}
                 className="w-[110%] h-[110%] object-contain drop-shadow-2xl z-10 transition-transform duration-500 group-hover:scale-105"
               />
@@ -125,9 +125,9 @@ export function StarProducts() {
               >
                 {/* Image Area - Maximized */}
                 <div className="absolute inset-0 p-0 flex items-center justify-center">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
+                  <img
+                    src={product.image}
+                    alt={product.name}
                     className="w-[100%] h-[100%] object-contain drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-2"
                   />
                 </div>
@@ -137,9 +137,9 @@ export function StarProducts() {
                   <div className="truncate pr-2">
                     <h4 className="font-bold uppercase text-xs leading-tight truncate">{product.name}</h4>
                     <div className="flex items-center gap-1 text-[10px] text-white/60 uppercase tracking-wider group-hover:text-white/90">
-                       <span>{product.category}</span>
-                       <span>•</span>
-                       <span>{product.specs}</span>
+                      <span>{product.category}</span>
+                      <span>•</span>
+                      <span>{product.specs}</span>
                     </div>
                   </div>
                   <div className="w-6 h-6 rounded-full bg-white/10 flex-shrink-0 flex items-center justify-center group-hover:bg-white/20">

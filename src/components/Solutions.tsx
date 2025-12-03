@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import solarLightImg from "figma:asset/27f73711b1c3be77cf50c8cc0f5b04b01e089b1b.png";
+import solarLightImg from "../assets/27f73711b1c3be77cf50c8cc0f5b04b01e089b1b.png";
 
 const products = [
   {
@@ -36,7 +36,7 @@ export function Solutions() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
             <h3 className="text-orange-500 font-bold tracking-widest text-sm mb-2 uppercase">Nuestras Soluciones</h3>
-            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter">Innovación en<br/>Iluminación</h2>
+            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter">Innovación en<br />Iluminación</h2>
           </div>
           <p className="text-gray-400 max-w-md mt-6 md:mt-0">
             Tecnología solar de última generación para alumbrado público, residencial y comercial.
@@ -55,14 +55,14 @@ export function Solutions() {
             >
               {/* Image Container */}
               <div className="aspect-[3/4] w-full overflow-hidden relative bg-white/5 rounded-t-[2rem]">
-                 <img 
-                   src={product.image} 
-                   alt={product.title}
-                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                 />
-                 <div className="absolute top-4 right-4 bg-white text-black text-xs font-bold px-2 py-1 uppercase tracking-wider rounded-full z-10">
-                   {product.tag}
-                 </div>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                />
+                <div className="absolute top-4 right-4 bg-white text-black text-xs font-bold px-2 py-1 uppercase tracking-wider rounded-full z-10">
+                  {product.tag}
+                </div>
               </div>
 
               {/* Content */}
@@ -73,7 +73,7 @@ export function Solutions() {
                 <h3 className="text-2xl font-bold leading-tight mb-6 group-hover:text-white transition-colors">
                   {product.title}
                 </h3>
-                
+
                 <button className="w-full py-4 border border-white/20 hover:bg-white hover:text-black transition-all uppercase text-xs font-bold tracking-[0.2em] flex items-center justify-center gap-2 group-hover:border-white rounded-xl">
                   Ver Detalles
                 </button>

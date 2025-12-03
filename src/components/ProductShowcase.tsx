@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Fragment } from "react";
-import streetLightImg from "figma:asset/4d67e3c68b5c294e16fc312a84617be5fdde3a3c.png";
-import ufoLightImg from "figma:asset/073c99c3eaee2dcfdbe11165e914a0604d80ca1a.png";
+import streetLightImg from "../assets/4d67e3c68b5c294e16fc312a84617be5fdde3a3c.png";
+import ufoLightImg from "../assets/073c99c3eaee2dcfdbe11165e914a0604d80ca1a.png";
 
 const categories = [
   { name: "Alumbrado Público", count: 12 },

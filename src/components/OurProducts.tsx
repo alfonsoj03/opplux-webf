@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import streetLightImg from "figma:asset/4d67e3c68b5c294e16fc312a84617be5fdde3a3c.png";
-import ufoLightImg from "figma:asset/073c99c3eaee2dcfdbe11165e914a0604d80ca1a.png";
+import streetLightImg from "../assets/4d67e3c68b5c294e16fc312a84617be5fdde3a3c.png";
+import ufoLightImg from "../assets/073c99c3eaee2dcfdbe11165e914a0604d80ca1a.png";
 
 // Types
 type Product = {
@@ -111,21 +111,19 @@ export function OurProducts() {
           <div className="flex items-center bg-zinc-100 p-1 rounded-none">
             <button
               onClick={() => setActiveCategory("solares")}
-              className={`px-6 py-2 text-sm font-bold transition-all rounded-none ${
-                activeCategory === "solares"
+              className={`px-6 py-2 text-sm font-bold transition-all rounded-none ${activeCategory === "solares"
                   ? "bg-[#FF8351] text-white shadow-sm"
                   : "bg-transparent text-zinc-500 hover:text-zinc-900"
-              }`}
+                }`}
             >
               Solares
             </button>
             <button
               onClick={() => setActiveCategory("viales")}
-              className={`px-6 py-2 text-sm font-bold transition-all rounded-none ${
-                activeCategory === "viales"
+              className={`px-6 py-2 text-sm font-bold transition-all rounded-none ${activeCategory === "viales"
                   ? "bg-[#FF8351] text-white shadow-sm"
                   : "bg-transparent text-zinc-500 hover:text-zinc-900"
-              }`}
+                }`}
             >
               Viales
             </button>
@@ -145,7 +143,7 @@ export function OurProducts() {
             >
               {/* Image Container - White background, sharp corners */}
               <div className="relative aspect-[4/5] bg-white border border-zinc-100 flex items-end justify-center overflow-hidden mb-4 transition-colors group-hover:border-zinc-200">
-                
+
                 {/* "En Existencia" Badge */}
                 {product.inStock && (
                   <div className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-zinc-100 px-2 py-1">
@@ -179,7 +177,7 @@ export function OurProducts() {
                 <h3 className="text-xs font-medium text-zinc-900 leading-snug min-h-[2.5em]">
                   {product.name}
                 </h3>
-                
+
                 {/* Price would go here but omitted as per strict instructions */}
               </div>
             </motion.div>

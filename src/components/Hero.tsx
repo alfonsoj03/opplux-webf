@@ -4,7 +4,7 @@ import {
   useSpring,
 } from "motion/react";
 import { ArrowRight, MapPin, Sun } from "lucide-react";
-import heroBg from "figma:asset/b9f87d67fa36b578fc899193ed536f1e87f40b82.png";
+import heroBg from "../assets/b9f87d67fa36b578fc899193ed536f1e87f40b82.png";
 import { MouseEvent, useEffect } from "react";
 
 export function Hero() {
