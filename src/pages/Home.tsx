@@ -9,7 +9,6 @@ import { ScalableFeatures } from "../components/ScalableFeatures";
 import { TailoredSolutions } from "../components/TailoredSolutions";
 import { TrustSection } from "../components/TrustSection";
 import { ProductShowcase } from "../components/ProductShowcase";
-import { ProductCatalog } from "../components/ProductCatalog";
 
 export function Home() {
     return (
@@ -24,7 +23,6 @@ export function Home() {
             <TailoredSolutions />
             <TrustSection />
             <ProductShowcase />
-            <ProductCatalog />
             <Categories />
         </>
     );
