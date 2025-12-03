@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import streetLightImg from "../assets/4d67e3c68b5c294e16fc312a84617be5fdde3a3c.png";
-import ufoLightImg from "../assets/073c99c3eaee2dcfdbe11165e914a0604d80ca1a.png";
+import streetLightImg from "../assets/street-light.png";
+import ufoLightImg from "../assets/ufo-light.png";
 
 // Types
 type Product = {
@@ -112,8 +112,8 @@ export function OurProducts() {
             <button
               onClick={() => setActiveCategory("solares")}
               className={`px-6 py-2 text-sm font-bold transition-all rounded-none ${activeCategory === "solares"
-                  ? "bg-[#FF8351] text-white shadow-sm"
-                  : "bg-transparent text-zinc-500 hover:text-zinc-900"
+                ? "bg-[#FF8351] text-white shadow-sm"
+                : "bg-transparent text-zinc-500 hover:text-zinc-900"
                 }`}
             >
               Solares
@@ -121,8 +121,8 @@ export function OurProducts() {
             <button
               onClick={() => setActiveCategory("viales")}
               className={`px-6 py-2 text-sm font-bold transition-all rounded-none ${activeCategory === "viales"
-                  ? "bg-[#FF8351] text-white shadow-sm"
-                  : "bg-transparent text-zinc-500 hover:text-zinc-900"
+                ? "bg-[#FF8351] text-white shadow-sm"
+                : "bg-transparent text-zinc-500 hover:text-zinc-900"
                 }`}
             >
               Viales
