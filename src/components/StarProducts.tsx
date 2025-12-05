@@ -1,13 +1,13 @@
 import { ArrowUpRight, Zap, Sun } from "lucide-react";
 import { motion } from "motion/react";
-import starProductImg from "../assets/e3e9a7e25d21fc5f686275e87d55866d78b5fa13.png";
+import streetLightImg from "../assets/street-light.png";
 
 const mainProduct = {
   id: "OPP-MAX-200",
   name: "Vial Solar Max 200W",
   tagline: "Autonomía 3 días",
   price: "Cotizar",
-  image: starProductImg,
+  image: streetLightImg,
   features: ["200W", "IP67", "LiFePO4"],
 };
 
@@ -16,35 +16,35 @@ const gridProducts = [
     id: "01",
     name: "Urban Eco 100W",
     category: "Vial",
-    image: starProductImg,
+    image: streetLightImg,
     specs: "12000lm"
   },
   {
     id: "02",
     name: "Garden Pro 50W",
     category: "Jardín",
-    image: starProductImg,
+    image: streetLightImg,
     specs: "6000lm"
   },
   {
     id: "03",
     name: "Reflector 300W",
     category: "Industrial",
-    image: starProductImg,
+    image: streetLightImg,
     specs: "35000lm"
   },
   {
     id: "04",
     name: "Wall Pack 40W",
     category: "Muro",
-    image: starProductImg,
+    image: streetLightImg,
     specs: "4800lm"
   }
 ];
 
 export function StarProducts() {
   return (
-    <section className="py-12 bg-white text-zinc-900 overflow-hidden">
+    <section className="py-36 bg-white text-zinc-900 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         {/* Compact Header */}
         <div className="flex flex-row justify-between items-end mb-8 gap-4">

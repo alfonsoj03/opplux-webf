@@ -8,7 +8,8 @@ import { Projects } from "../components/Projects";
 import { ScalableFeatures } from "../components/ScalableFeatures";
 import { TailoredSolutions } from "../components/TailoredSolutions";
 import { TrustSection } from "../components/TrustSection";
-import { ProductShowcase } from "../components/ProductShowcase";
+import { ProductCatalog } from "@/components/ProductCatalog";
+import { OurProducts } from "@/components/OurProducts";
 
 export function Home() {
     return (
@@ -16,13 +17,13 @@ export function Home() {
             <Hero />
             <Marquee />
             <Features />
-            <StarProducts />
             <Solutions />
             <Projects />
+            {/*<StarProducts />*/}
             <ScalableFeatures />
             <TailoredSolutions />
-            <TrustSection />
-            <ProductShowcase />
+            {/*<TrustSection />*/}
+            {/*Our Products */}
             <Categories />
         </>
     );

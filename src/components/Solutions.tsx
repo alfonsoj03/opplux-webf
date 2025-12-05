@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import solarLightImg from "../assets/27f73711b1c3be77cf50c8cc0f5b04b01e089b1b.png";
 
@@ -51,10 +51,10 @@ export function Solutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="group relative bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-colors duration-300 overflow-hidden rounded-[2rem]"
+              className="group relative bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-colors duration-300 overflow-hidden"
             >
               {/* Image Container */}
-              <div className="aspect-[3/4] w-full overflow-hidden relative bg-white/5 rounded-t-[2rem]">
+              <div className="aspect-square w-full overflow-hidden relative bg-white/5">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -66,20 +66,38 @@ export function Solutions() {
               </div>
 
               {/* Content */}
-              <div className="p-8">
+              <div className="p-8 relative">
                 <p className="text-orange-500 text-xs font-bold tracking-wider uppercase mb-2">
                   {product.category}
                 </p>
-                <h3 className="text-2xl font-bold leading-tight mb-6 group-hover:text-white transition-colors">
+                <h3 className="text-2xl font-bold leading-tight mb-3 group-hover:text-white transition-colors">
                   {product.title}
                 </h3>
 
-                <button className="w-full py-4 border border-white/20 hover:bg-white hover:text-black transition-all uppercase text-xs font-bold tracking-[0.2em] flex items-center justify-center gap-2 group-hover:border-white rounded-xl">
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  Solución de iluminación solar de alta eficiencia con tecnología LED avanzada y panel fotovoltaico integrado.
+                </p>
+
+                <button className="inline-flex items-center gap-2 text-[#FF8351] hover:text-[#ff6a31] transition-colors text-xs font-bold uppercase tracking-wider group/btn">
                   Ver Detalles
+                  <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                 </button>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12">
+          <div className="flex items-center justify-between">
+            <div className="text-zinc-600 text-md">
+              Descubre nuestra línea completa de productos
+            </div>
+            <button className="text-zinc-600 hover:text-zinc-400 font-bold text-sm uppercase tracking-wider transition-colors flex items-center gap-2 group">
+              Ver Todo El Catálogo
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
